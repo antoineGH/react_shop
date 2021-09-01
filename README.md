@@ -19,7 +19,7 @@ Shop is an eCommerce solution caters to the exchange of goods for electronic tra
 
 Our solution is Business to Consumer (B2C) oriented, in our case goods and services are sold by one business to a consumer.
 
-### [> View Technical Specifications Shop](screenshots/Specifications_Project_Shop.pdf)
+### [> View Technical Specifications Shop](https://templars.guru/app/github/react_shop/Specifications_Project_Shop.pdf)
 
 ### Project Scope
 
@@ -148,7 +148,7 @@ The following are the main features that are included in the system:
 
 ## 4. Technical Implementation<a name="implementation"></a>
 
-![Communication Screenshot](https://github.com/antoineratat/react_shop/blob/main/screenshots/1.png?raw=true)
+![Communication Screenshot](https://templars.guru/app/github/react_shop/1.png)
 
 Application Communication Schema
 
@@ -289,12 +289,12 @@ npm start
 
 ## 9. Project structure<a name="structure"></a>
 
-![Components Screenshot](https://github.com/antoineratat/react_dashboard_finance/blob/main/screenshots/2.png?raw=true)
+![Components Screenshot](https://templars.guru/app/github/react_shop/2.png)
 
 ## 10. Screenshots<a name="screenshots"></a>
 
-Main Pages Full-Screen Desktop Mockup ![Components Screenshot](https://github.com/antoineratat/react_shop/blob/main/screenshots/3.png?raw=true)
+Main Pages Full-Screen Desktop Mockup ![Components Screenshot](https://templars.guru/app/github/react_shop/3.png)
 
-Product Detail – Mobile Version English ![Components Screenshot](https://github.com/antoineratat/react_shop/blob/main/screenshots/4.png?raw=true)
+Product Detail – Mobile Version English ![Components Screenshot](https://templars.guru/app/github/react_shop/4.png)
 
-Login Modal – Product Browsing – My Order – My Cart – My Delivery Information - Mobile ![Components Screenshot](https://github.com/antoineratat/react_shop/blob/main/screenshots/5.png?raw=true)
+Login Modal – Product Browsing – My Order – My Cart – My Delivery Information - Mobile ![Components Screenshot](https://templars.guru/app/github/react_shop/5.png)
