@@ -247,9 +247,7 @@ Navigation Experience
 
 Software is designed in small fragmented atomic components. Each component has specific functionality and assembled together creates our application.
 
-This is easier to maintain, replace, and re-use. The component organization of the Financial app is available in the scheme below:
-
-![Interfaces Screenshot](https://github.com/antoineratat/react_shop/blob/main/screenshots/2.png?raw=true)
+This is easier to maintain, replace, and re-use. 
 
 Communication is assured to external interfaces. The system is connected to several APIs using REST (representational state transfer), The payload is defined in the request itself and is formatted in JSON. Most of the operations are directed to a custom-made API.
 
