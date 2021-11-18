@@ -148,7 +148,7 @@ The following are the main features that are included in the system:
 
 ## 4. Technical Implementation<a name="implementation"></a>
 
-![Communication Screenshot](https://templars.guru/app/github/react_shop/1.png)
+![Communication Screenshot](https://github.com/antoineratat/github_docs/blob/main/react_shop/1.png?raw=true)
 
 Application Communication Schema
 
@@ -287,12 +287,12 @@ npm start
 
 ## 9. Project structure<a name="structure"></a>
 
-![Components Screenshot](https://templars.guru/app/github/react_shop/2.png)
+![Components Screenshot](https://github.com/antoineratat/github_docs/blob/main/react_shop/2.png?raw=true)
 
 ## 10. Screenshots<a name="screenshots"></a>
 
-Main Pages Full-Screen Desktop Mockup ![Components Screenshot](https://templars.guru/app/github/react_shop/3.png)
+Main Pages Full-Screen Desktop Mockup ![Components Screenshot](https://github.com/antoineratat/github_docs/blob/main/react_shop/3.png?raw=true)
 
-Product Detail – Mobile Version English ![Components Screenshot](https://templars.guru/app/github/react_shop/4.png)
+Product Detail – Mobile Version English ![Components Screenshot](https://github.com/antoineratat/github_docs/blob/main/react_shop/4.png?raw=true)
 
-Login Modal – Product Browsing – My Order – My Cart – My Delivery Information - Mobile ![Components Screenshot](https://templars.guru/app/github/react_shop/5.png)
+Login Modal – Product Browsing – My Order – My Cart – My Delivery Information - Mobile ![Components Screenshot](https://github.com/antoineratat/github_docs/blob/main/react_shop/5.png?raw=true)
