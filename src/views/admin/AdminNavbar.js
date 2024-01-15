@@ -9,7 +9,6 @@ import {
   DropdownButton,
 } from "react-bootstrap";
 import { useHistory, NavLink, Link } from "react-router-dom";
-import Flags from "country-flag-icons/react/3x2";
 import { LanguageContext } from "../../language/LanguageContext";
 import { logout } from "../../utils/authHooks";
 import fetchCart from "../../utils/fetchCart";
@@ -79,6 +78,10 @@ export default function AdminNavbar(props) {
                 <Navbar.Collapse id="basic-navbar-nav">
                   <Nav className="mr-auto">
                     <NavLink
+                      style={{
+                        marginRight: "20px",
+                        marginLeft: "20px",
+                      }}
                       to="/products"
                       className={
                         language === "zh-CN"
@@ -89,6 +92,7 @@ export default function AdminNavbar(props) {
                       {dictionary.collection.toUpperCase()}
                     </NavLink>
                     <NavLink
+                      style={{ marginRight: "20px" }}
                       to="/women"
                       className={
                         language === "zh-CN"
@@ -99,6 +103,7 @@ export default function AdminNavbar(props) {
                       {dictionary.women.toUpperCase()}
                     </NavLink>
                     <NavLink
+                      style={{ marginRight: "20px" }}
                       to="/men"
                       className={
                         language === "zh-CN"
@@ -109,6 +114,7 @@ export default function AdminNavbar(props) {
                       {dictionary.men.toUpperCase()}
                     </NavLink>
                     <NavLink
+                      style={{ marginRight: "20px" }}
                       to="/admin/orders"
                       className={
                         language === "zh-CN"
@@ -135,7 +141,12 @@ export default function AdminNavbar(props) {
                 expand="lg"
                 variant="light"
                 bg="light"
-                style={{ marginRight: "0", boxShadow: "none" }}
+                style={{
+                  marginRight: "0",
+                  boxShadow: "none",
+                  display: "flex",
+                  justifyContent: "flex-end",
+                }}
               >
                 <Button
                   onClick={() => history.push("/admin/cart")}
@@ -180,7 +191,6 @@ export default function AdminNavbar(props) {
                     size="sm"
                     onClick={() => props.handleUpdateLanguage("en-US")}
                   >
-                    <Flags.CN title="China" className="flag_cn mb-1" />
                     <span className="ml-2 font_CN_normal">中文</span>
                   </Button>
                 ) : (
@@ -189,7 +199,6 @@ export default function AdminNavbar(props) {
                     size="sm"
                     onClick={() => props.handleUpdateLanguage("zh-CN")}
                   >
-                    <Flags.US title="United States" className="flag_us mb-1" />
                     <span className="ml-2 ">EN</span>
                   </Button>
                 )}

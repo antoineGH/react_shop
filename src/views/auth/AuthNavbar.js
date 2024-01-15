@@ -13,7 +13,6 @@ import LoginModal from "../../utils/LoginModal";
 import RegisterModal from "../../utils/RegisterModal";
 import ForgotModal from "../../utils/ForgotModal";
 import { Link, NavLink } from "react-router-dom";
-import Flags from "country-flag-icons/react/3x2";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { fas } from "@fortawesome/free-solid-svg-icons";
@@ -95,7 +94,12 @@ export default function AuthNavbar(props) {
                 expand="lg"
                 variant="light"
                 bg="light"
-                style={{ marginRight: "0", boxShadow: "none" }}
+                style={{
+                  marginRight: "0",
+                  boxShadow: "none",
+                  display: "flex",
+                  justifyContent: "flex-end",
+                }}
               >
                 <DropdownButton
                   className="my-auto"
@@ -125,20 +129,18 @@ export default function AuthNavbar(props) {
                 </DropdownButton>
                 {props.language !== "en-US" ? (
                   <Button
-                    className="button_language ml-5"
+                    className="button_language"
                     size="sm"
                     onClick={() => props.handleUpdateLanguage("en-US")}
                   >
-                    <Flags.CN title="China" className="flag_cn mb-1" />
                     <span className="ml-2 font_CN_normal">中文</span>
                   </Button>
                 ) : (
                   <Button
-                    className="button_language ml-5"
+                    className="button_language"
                     size="sm"
                     onClick={() => props.handleUpdateLanguage("zh-CN")}
                   >
-                    <Flags.US title="United States" className="flag_us mb-1" />
                     <span className="ml-2">EN</span>
                   </Button>
                 )}
