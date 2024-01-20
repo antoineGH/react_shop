@@ -69,7 +69,7 @@ export default function Payment(props) {
       return;
     }
     const paymentDetail = { delivery, cart, total };
-    authFetch("https://flask-shop-application-api.herokuapp.com/api/pay", {
+    authFetch("https://antoineratat.xyz/api_shop/api/pay", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -107,16 +107,13 @@ export default function Payment(props) {
           if (result.paymentIntent.status === "succeeded") {
             const payment = result.paymentIntent;
             const orderInfo = { cart, total, payment };
-            authFetch(
-              "https://flask-shop-application-api.herokuapp.com/api/order",
-              {
-                method: "POST",
-                headers: {
-                  "Content-Type": "application/json",
-                },
-                body: JSON.stringify(orderInfo),
-              }
-            )
+            authFetch("https://antoineratat.xyz/api_shop/api/order", {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify(orderInfo),
+            })
               .then(async function (response) {
                 const responseJson = await response.json();
                 setIsDisabled(false);
