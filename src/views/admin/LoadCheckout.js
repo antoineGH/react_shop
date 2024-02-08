@@ -374,7 +374,7 @@ export default function LoadCheckout(props) {
                           <FontAwesomeIcon
                             size="1x"
                             icon={["fas", "chevron-left"]}
-                            style={{ paddingRight: ".5rem" }}
+                            style={{ paddingRight: ".5rem", width: "17px" }}
                           />
                           {"  "}
                           {dictionary.my_cart}
@@ -454,7 +454,7 @@ export default function LoadCheckout(props) {
                             className="mr-2"
                             size="1x"
                             icon={["fas", "chevron-right"]}
-                            style={{ paddingLeft: ".5rem" }}
+                            style={{ paddingLeft: ".5rem", width: "17px" }}
                           />
                         </Button>
                       </Col>
@@ -520,7 +520,7 @@ export default function LoadCheckout(props) {
                         <FontAwesomeIcon
                           size="1x"
                           icon={["fas", "chevron-left"]}
-                          style={{ paddingRight: ".5rem" }}
+                          style={{ paddingRight: ".5rem", width: "17px" }}
                         />
                         {"  "}
                         {dictionary.my_cart}
@@ -575,7 +575,7 @@ export default function LoadCheckout(props) {
                           className="mr-2"
                           size="1x"
                           icon={["fas", "chevron-right"]}
-                          style={{ paddingLeft: ".5rem" }}
+                          style={{ paddingLeft: ".5rem", width: "17px" }}
                         />
                       </Button>
                     </Col>

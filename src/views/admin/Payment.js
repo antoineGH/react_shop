@@ -165,7 +165,7 @@ export default function Payment(props) {
                         <FontAwesomeIcon
                           size="1x"
                           icon={["fas", "chevron-left"]}
-                          style={{ paddingRight: ".5rem" }}
+                          style={{ paddingRight: ".5rem", width: "17px" }}
                         />
                         {"  "}
                         {dictionary.delivery_options}
@@ -474,7 +474,7 @@ export default function Payment(props) {
                       <FontAwesomeIcon
                         size="1x"
                         icon={["fas", "lock"]}
-                        style={{ paddingRight: ".5rem" }}
+                        style={{ paddingRight: ".5rem", width: "17px" }}
                       />
                       {"  "}
                       {dictionary.secure_payment}

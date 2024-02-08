@@ -172,7 +172,7 @@ export default function Profile(props) {
                         <FontAwesomeIcon
                           size="1x"
                           icon={["fas", "chevron-left"]}
-                          style={{ paddingRight: ".5rem" }}
+                          style={{ paddingRight: ".5rem", width: "17px" }}
                         />
                         {"  "}
                         {dictionary.back_to_shopping}

@@ -179,7 +179,7 @@ export default function Orders() {
                             className="mr-1"
                             size="1x"
                             icon={["fas", "mobile-alt"]}
-                            style={{ paddingRight: ".5rem" }}
+                            style={{ paddingRight: ".5rem", width: "17px" }}
                           />
                           {dictionary.call_us}
                         </p>
@@ -436,7 +436,7 @@ export default function Orders() {
                           className="mr-1"
                           size="1x"
                           icon={["fas", "mobile-alt"]}
-                          style={{ paddingRight: ".5rem" }}
+                          style={{ paddingRight: ".5rem", width: "17px" }}
                         />
                         {"    "}
                         {dictionary.call_us}
@@ -782,7 +782,7 @@ export default function Orders() {
                             className="mr-1"
                             size="1x"
                             icon={["fas", "mobile-alt"]}
-                            style={{ paddingRight: ".5rem" }}
+                            style={{ paddingRight: ".5rem", width: "17px" }}
                           />
                           {"    "}
                           {dictionary.call_us}
@@ -1051,7 +1051,7 @@ export default function Orders() {
                           className="mr-1"
                           size="1x"
                           icon={["fas", "mobile-alt"]}
-                          style={{ paddingRight: ".5rem" }}
+                          style={{ paddingRight: ".5rem", width: "17px" }}
                         />
                         {"    "}
                         {dictionary.call_us}

@@ -148,7 +148,7 @@ export default function CartList(props) {
                         <FontAwesomeIcon
                           size="1x"
                           icon={["fas", "chevron-right"]}
-                          style={{ paddingLeft: ".5rem" }}
+                          style={{ paddingLeft: ".5rem", width: "17px" }}
                         />
                       </Button>
                     </Col>
@@ -165,7 +165,7 @@ export default function CartList(props) {
                       <FontAwesomeIcon
                         size="1x"
                         icon={["fas", "lock"]}
-                        style={{ paddingRight: ".5rem" }}
+                        style={{ paddingRight: ".5rem", width: "17px" }}
                       />
                       {"  "}
                       {dictionary.secure_payment}
