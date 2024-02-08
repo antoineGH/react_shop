@@ -165,6 +165,7 @@ export default function Payment(props) {
                         <FontAwesomeIcon
                           size="1x"
                           icon={["fas", "chevron-left"]}
+                          style={{ paddingRight: ".5rem" }}
                         />
                         {"  "}
                         {dictionary.delivery_options}
@@ -182,7 +183,7 @@ export default function Payment(props) {
                         }
                         style={{ marginBottom: "0rem" }}
                       >
-                        {dictionary.my_orders.toUpperCase()}{" "}
+                        {dictionary.my_orders.toUpperCase().slice(0, -1)}{" "}
                         <span
                           className={
                             language
@@ -196,7 +197,13 @@ export default function Payment(props) {
                     </Col>
                   </Row>
 
-                  <Card className="mx-auto mb-3 card_cart_product">
+                  <Card
+                    className="mx-auto mb-3 card_cart_product"
+                    style={{
+                      borderRadius: "0.3rem",
+                      boxShadow: "rgba(99, 99, 99, 0.2) 0px 2px 8px 0px",
+                    }}
+                  >
                     <Row style={{ padding: "1rem" }}>
                       <Col
                         xs={12}
@@ -212,7 +219,7 @@ export default function Payment(props) {
                               ? "font_normal_size_CN"
                               : "font_normal_size"
                           }
-                          style={{ marginBottom: "0rem" }}
+                          style={{ marginBottom: "0rem", textAlign: "center" }}
                         >
                           {delivery.first_name &&
                             titleCase(delivery.first_name)}{" "}
@@ -233,50 +240,12 @@ export default function Payment(props) {
                               ? "font_normal_size_CN"
                               : "font_normal_size"
                           }
-                          style={{ marginBottom: "0rem" }}
+                          style={{ marginBottom: "0rem", textAlign: "center" }}
                         >
                           {delivery.phone}
                         </Card.Text>
                       </Col>
-                      <Col
-                        xs={12}
-                        sm={12}
-                        md={{ span: 6, order: 1 }}
-                        lg={{ span: 4, order: 2 }}
-                        className="my-auto"
-                        style={{ marginBottom: "0" }}
-                      >
-                        <Card.Text
-                          className={
-                            language === "zh-CN"
-                              ? "font_normal_size_CN"
-                              : "font_normal_size"
-                          }
-                          style={{ marginBottom: "0rem" }}
-                        >
-                          {delivery.address && titleCase(delivery.address)}
-                        </Card.Text>
-                      </Col>
-                      <Col
-                        xs={12}
-                        sm={12}
-                        md={{ span: 6, order: 3 }}
-                        lg={{ span: 4, order: 3 }}
-                        className="my-auto"
-                        style={{ marginBottom: "0" }}
-                      >
-                        <Card.Text
-                          className={
-                            language === "zh-CN"
-                              ? "font_normal_size_CN"
-                              : "font_normal_size"
-                          }
-                          style={{ marginBottom: "0rem" }}
-                        >
-                          {delivery.city &&
-                            titleCase(delivery.city) + " " + delivery.postcode}
-                        </Card.Text>
-                      </Col>
+
                       <Col
                         xs={12}
                         sm={12}
@@ -292,7 +261,30 @@ export default function Payment(props) {
                               : "font_normal_size"
                           }
                           style={{ marginBottom: "0rem" }}
+                        ></Card.Text>
+                      </Col>
+
+                      <Col
+                        xs={12}
+                        sm={12}
+                        md={{ span: 6, order: 1 }}
+                        lg={{ span: 4, order: 2 }}
+                        className="my-auto"
+                        style={{ marginBottom: "0" }}
+                      >
+                        <Card.Text
+                          className={
+                            language === "zh-CN"
+                              ? "font_normal_size_CN"
+                              : "font_normal_size"
+                          }
+                          style={{ marginBottom: "0rem", textAlign: "center" }}
                         >
+                          {delivery.address && titleCase(delivery.address)}
+                          {", "}
+                          {delivery.city &&
+                            delivery.postcode + " " + titleCase(delivery.city)}
+                          {", "}
                           {delivery.state && titleCase(delivery.state)}{" "}
                           {delivery.country && titleCase(delivery.country)}
                         </Card.Text>
@@ -303,7 +295,13 @@ export default function Payment(props) {
                   {cart.map((cartdetail) => {
                     return (
                       <div key={cartdetail.cart_id}>
-                        <Card className="mx-auto mb-3 card_cart_product">
+                        <Card
+                          className="mx-auto mb-3 card_cart_product"
+                          style={{
+                            borderRadius: "0.3rem",
+                            boxShadow: "rgba(99, 99, 99, 0.2) 0px 2px 8px 0px",
+                          }}
+                        >
                           <Row className="no-gutters">
                             <Col md={3} className="my-auto">
                               <Image
@@ -317,7 +315,10 @@ export default function Payment(props) {
                                   <Col style={{ marginBottom: "0" }}>
                                     <Card.Text
                                       className="card_cart_product_title text-center text-md-left"
-                                      style={{ marginBottom: "0rem" }}
+                                      style={{
+                                        marginBottom: "0rem",
+                                        fontSize: "1.2rem",
+                                      }}
                                     >
                                       {cartdetail.product_name}
                                     </Card.Text>
@@ -437,7 +438,7 @@ export default function Payment(props) {
                     </Col>
                   </Row>
                   <Row className="header_cart_right ml-md-2 justify-content-center">
-                    <Col md={6}>
+                    <Col md={6} className="mt-2">
                       <Button
                         disabled={isDisabled}
                         onClick={handlePayment}
@@ -470,7 +471,11 @@ export default function Payment(props) {
                           : "font_normal_size"
                       }
                     >
-                      <FontAwesomeIcon size="1x" icon={["fas", "lock"]} />
+                      <FontAwesomeIcon
+                        size="1x"
+                        icon={["fas", "lock"]}
+                        style={{ paddingRight: ".5rem" }}
+                      />
                       {"  "}
                       {dictionary.secure_payment}
                     </Col>

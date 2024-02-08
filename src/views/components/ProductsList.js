@@ -88,7 +88,7 @@ export default function ProductsList(props) {
           <Col md={11} style={{ paddingRight: "0px" }}>
             <Row style={{ marginRight: 0, marginLeft: 0 }}>
               <Col
-                className="col_header_collection text-center text-md-left my-auto ml-md-4 border_right"
+                className="col_header_collection text-center text-md-left my-auto ml-md-4"
                 style={{ borderBottom: "0" }}
               >
                 <Row>
@@ -133,7 +133,13 @@ export default function ProductsList(props) {
                     {activeFilter && (
                       <Button
                         size="sm"
-                        style={{ width: "auto", height: "2rem" }}
+                        style={{
+                          width: "auto",
+                          borderRadius: "15px",
+                          maxHeight: "2rem",
+                          textTransform: "capitalize",
+                          padding: "2px 12px",
+                        }}
                         className="button_cart"
                         variant="secondary"
                         onClick={removeFilters}
@@ -155,7 +161,13 @@ export default function ProductsList(props) {
                     {activeSort && (
                       <Button
                         size="sm"
-                        style={{ width: "auto", height: "2rem" }}
+                        style={{
+                          width: "auto",
+                          borderRadius: "15px",
+                          maxHeight: "2rem",
+                          textTransform: "capitalize",
+                          padding: "2px 12px",
+                        }}
                         className="button_cart ml-4"
                         variant="secondary"
                         onClick={removeSort}
