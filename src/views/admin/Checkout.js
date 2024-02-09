@@ -175,12 +175,17 @@ export default function Checkout(props) {
   if (hasUserDetail) {
     return (
       <>
-        <Container fluid>
+        <Container
+          fluid
+          style={{ height: "calc(100vh - 60px)", overflowY: "auto" }}
+        >
           <Row>
             <Col
               xs={{ span: 12, order: 2 }}
               lg={{ span: 8, order: 1 }}
-              style={{ backgroundColor: "#f6f5f3" }}
+              style={{
+                backgroundColor: "#f6f5f3",
+              }}
             >
               <Container style={{ minHeight: "90vh" }}>
                 <Row>
@@ -470,7 +475,9 @@ export default function Checkout(props) {
       <>
         <Container
           fluid
-          style={{ minHeight: "90vh", backgroundColor: "#f6f5f3" }}
+          style={{
+            backgroundColor: "pink",
+          }}
         >
           <Container>
             <Row>

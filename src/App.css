@@ -862,6 +862,7 @@ a:hover {
   text-align: center;
   font-size: 1rem;
   transition: all 0.5s ease;
+  max-width: 175px;
 }
 
 .button_cancel_cart_CN {
