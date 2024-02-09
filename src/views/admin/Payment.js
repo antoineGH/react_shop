@@ -292,116 +292,124 @@ export default function Payment(props) {
                     </Row>
                   </Card>
 
-                  {cart.map((cartdetail) => {
-                    return (
-                      <div key={cartdetail.cart_id}>
-                        <Card
-                          className="mx-auto mb-3 card_cart_product"
-                          style={{
-                            borderRadius: "0.3rem",
-                            boxShadow: "rgba(99, 99, 99, 0.2) 0px 2px 8px 0px",
-                          }}
-                        >
-                          <Row className="no-gutters">
-                            <Col md={3} className="my-auto">
-                              <Image
-                                className="card_product_image_payment"
-                                src={cartdetail.images_url}
-                              />
-                            </Col>
-                            <Col md={5} className="text-left">
-                              <Card.Body>
-                                <Row>
-                                  <Col style={{ marginBottom: "0" }}>
-                                    <Card.Text
-                                      className="card_cart_product_title text-center text-md-left"
+                  <Row
+                    style={{
+                      height: "72vh",
+                      overflowY: "auto",
+                    }}
+                  >
+                    {cart.map((cartdetail) => {
+                      return (
+                        <div key={cartdetail.cart_id}>
+                          <Card
+                            className="mx-auto mb-3 card_cart_product"
+                            style={{
+                              borderRadius: "0.3rem",
+                              boxShadow:
+                                "rgba(99, 99, 99, 0.2) 0px 2px 8px 0px",
+                            }}
+                          >
+                            <Row className="no-gutters">
+                              <Col md={3} className="my-auto">
+                                <Image
+                                  className="card_product_image_payment"
+                                  src={cartdetail.images_url}
+                                />
+                              </Col>
+                              <Col md={5} className="text-left">
+                                <Card.Body>
+                                  <Row>
+                                    <Col style={{ marginBottom: "0" }}>
+                                      <Card.Text
+                                        className="card_cart_product_title text-center text-md-left"
+                                        style={{
+                                          marginBottom: "0rem",
+                                          fontSize: "1.2rem",
+                                        }}
+                                      >
+                                        {cartdetail.product_name}
+                                      </Card.Text>
+                                    </Col>
+                                  </Row>
+                                  <Row className="text-center text-md-left">
+                                    <Col
                                       style={{
-                                        marginBottom: "0rem",
-                                        fontSize: "1.2rem",
+                                        marginTop: "0",
+                                        marginBottom: "0",
                                       }}
                                     >
-                                      {cartdetail.product_name}
-                                    </Card.Text>
-                                  </Col>
-                                </Row>
-                                <Row className="text-center text-md-left">
-                                  <Col
-                                    style={{
-                                      marginTop: "0",
-                                      marginBottom: "0",
-                                    }}
-                                  >
-                                    <Card.Text
-                                      className={
-                                        language === "zh-CN"
-                                          ? "font_CN_normal"
-                                          : ""
-                                      }
+                                      <Card.Text
+                                        className={
+                                          language === "zh-CN"
+                                            ? "font_CN_normal"
+                                            : ""
+                                        }
+                                      >
+                                        {InStock(cartdetail.stock)}
+                                      </Card.Text>
+                                    </Col>
+                                  </Row>
+                                  <Row>
+                                    <Col
+                                      style={{ margin: "1rem 1rem 0rem 1rem" }}
                                     >
-                                      {InStock(cartdetail.stock)}
-                                    </Card.Text>
-                                  </Col>
-                                </Row>
-                                <Row>
-                                  <Col
-                                    style={{ margin: "1rem 1rem 0rem 1rem" }}
-                                  >
-                                    <Card.Text className="card_cart_product_price text-center text-md-left">
-                                      <span
-                                        className={
-                                          language === "zh-CN"
-                                            ? "font_normal_size_CN"
-                                            : "font_normal_size"
-                                        }
-                                        style={{ fontWeight: "500" }}
-                                      >
-                                        {dictionary.unit_price}:
-                                      </span>{" "}
-                                      ${formatMoney(cartdetail.unit_price)}
-                                    </Card.Text>
-                                  </Col>
-                                </Row>
-                                <Row>
-                                  <Col style={{ margin: "0 1rem" }}>
-                                    <Card.Text className="card_cart_product_price text-center text-md-left">
-                                      <span
-                                        className={
-                                          language === "zh-CN"
-                                            ? "font_normal_size_CN"
-                                            : "font_normal_size"
-                                        }
-                                        style={{ fontWeight: "500" }}
-                                      >
-                                        {dictionary.quantity}:
-                                      </span>{" "}
-                                      {cartdetail.quantity}
-                                    </Card.Text>
-                                  </Col>
-                                </Row>
-                                <Row className="mb-4 ">
-                                  <Col style={{ margin: "0 1rem" }}>
-                                    <Card.Text className="card_cart_product_price text-center text-md-left">
-                                      <span
-                                        className={
-                                          language === "zh-CN"
-                                            ? "font_normal_size_CN"
-                                            : "font_normal_size"
-                                        }
-                                        style={{ fontWeight: "500" }}
-                                      >
-                                        {dictionary.total_product}:
-                                      </span>{" "}
-                                      ${formatMoney(cartdetail.total_product)}
-                                    </Card.Text>
-                                  </Col>
-                                </Row>
-                              </Card.Body>
-                            </Col>
-                          </Row>
-                        </Card>
-                      </div>
-                    );
-                  })}
+                                      <Card.Text className="card_cart_product_price text-center text-md-left">
+                                        <span
+                                          className={
+                                            language === "zh-CN"
+                                              ? "font_normal_size_CN"
+                                              : "font_normal_size"
+                                          }
+                                          style={{ fontWeight: "500" }}
+                                        >
+                                          {dictionary.unit_price}:
+                                        </span>{" "}
+                                        ${formatMoney(cartdetail.unit_price)}
+                                      </Card.Text>
+                                    </Col>
+                                  </Row>
+                                  <Row>
+                                    <Col style={{ margin: "0 1rem" }}>
+                                      <Card.Text className="card_cart_product_price text-center text-md-left">
+                                        <span
+                                          className={
+                                            language === "zh-CN"
+                                              ? "font_normal_size_CN"
+                                              : "font_normal_size"
+                                          }
+                                          style={{ fontWeight: "500" }}
+                                        >
+                                          {dictionary.quantity}:
+                                        </span>{" "}
+                                        {cartdetail.quantity}
+                                      </Card.Text>
+                                    </Col>
+                                  </Row>
+                                  <Row className="mb-4 ">
+                                    <Col style={{ margin: "0 1rem" }}>
+                                      <Card.Text className="card_cart_product_price text-center text-md-left">
+                                        <span
+                                          className={
+                                            language === "zh-CN"
+                                              ? "font_normal_size_CN"
+                                              : "font_normal_size"
+                                          }
+                                          style={{ fontWeight: "500" }}
+                                        >
+                                          {dictionary.total_product}:
+                                        </span>{" "}
+                                        ${formatMoney(cartdetail.total_product)}
+                                      </Card.Text>
+                                    </Col>
+                                  </Row>
+                                </Card.Body>
+                              </Col>
+                            </Row>
+                          </Card>
+                        </div>
+                      );
+                    })}
+                  </Row>
                 </Col>
               </Row>
               <br />

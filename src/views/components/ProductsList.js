@@ -85,19 +85,14 @@ export default function ProductsList(props) {
         }}
       >
         <Row className="justify-content-center row_header_filter">
-          <Col md={11} style={{ paddingRight: "0px" }}>
+          <Col xs={11} style={{ paddingRight: "0px" }}>
             <Row style={{ marginRight: 0, marginLeft: 0 }}>
               <Col
                 className="col_header_collection text-center text-md-left my-auto ml-md-4"
                 style={{ borderBottom: "0" }}
               >
                 <Row>
-                  <Col
-                    xl={8}
-                    lg={8}
-                    md={7}
-                    style={{ marginLeft: "0px", paddingLeft: "0px" }}
-                  >
+                  <Col xl={8} lg={8} md={7} xs={12}>
                     <p
                       className={
                         language === "zh-CN" ? "navbar_menu_subitems_CN" : ""
@@ -122,8 +117,7 @@ export default function ProductsList(props) {
                     </p>
                   </Col>
                   <Col
-                    xs={8}
-                    sm={5}
+                    xs={12}
                     md={5}
                     lg={4}
                     xl={4}

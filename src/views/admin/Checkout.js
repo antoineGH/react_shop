@@ -245,7 +245,7 @@ export default function Checkout(props) {
                         }
                       >
                         <Row style={{ padding: "3rem 1rem", gap: "1rem" }}>
-                          <Col xs={12} sm={12} md={9} lg={8} xl={8}>
+                          <Col xs={12}>
                             <Form.Control
                               as="select"
                               className="custom_dropdown"
@@ -271,43 +271,14 @@ export default function Checkout(props) {
                             </Form.Control>
                           </Col>
 
-                          <Button
-                            size="sm"
-                            variant="secondary"
+                          <div
                             style={{
-                              height: "2.5rem",
-                              borderRadius: ".3rem",
-                              minWidth: "100px",
+                              display: "flex",
+                              alignContent: "center",
+                              gap: "1rem",
+                              marginLeft: "1rem",
                             }}
-                            className={
-                              language === "zh-CN"
-                                ? "mt-3 mt-md-0 button_address font_normal_size_CN"
-                                : "mt-3 mt-md-0 button_address font_normal_size"
-                            }
-                            onClick={() => addUserDetail()}
                           >
-                            {dictionary.add}
-                          </Button>
-
-                          <Button
-                            size="sm"
-                            variant="secondary"
-                            style={{
-                              height: "2.5rem",
-                              borderRadius: ".3rem",
-                              minWidth: "100px",
-                            }}
-                            type="submit"
-                            className={
-                              language === "zh-CN"
-                                ? "mt-3 mt-md-0 button_address font_normal_size_CN"
-                                : "mt-3 mt-md-0 button_address font_normal_size"
-                            }
-                          >
-                            {dictionary.edit}
-                          </Button>
-
-                          {userDetails.length > 1 && (
                             <Button
                               size="sm"
                               variant="secondary"
@@ -321,11 +292,49 @@ export default function Checkout(props) {
                                   ? "mt-3 mt-md-0 button_address font_normal_size_CN"
                                   : "mt-3 mt-md-0 button_address font_normal_size"
                               }
-                              onClick={() => deleteUserDetail(deliveryOption)}
+                              onClick={() => addUserDetail()}
                             >
-                              {dictionary.delete}
+                              {dictionary.add}
                             </Button>
-                          )}
+
+                            <Button
+                              size="sm"
+                              variant="secondary"
+                              style={{
+                                height: "2.5rem",
+                                borderRadius: ".3rem",
+                                minWidth: "100px",
+                              }}
+                              type="submit"
+                              className={
+                                language === "zh-CN"
+                                  ? "mt-3 mt-md-0 button_address font_normal_size_CN"
+                                  : "mt-3 mt-md-0 button_address font_normal_size"
+                              }
+                            >
+                              {dictionary.edit}
+                            </Button>
+
+                            {userDetails.length > 1 && (
+                              <Button
+                                size="sm"
+                                variant="secondary"
+                                style={{
+                                  height: "2.5rem",
+                                  borderRadius: ".3rem",
+                                  minWidth: "100px",
+                                }}
+                                className={
+                                  language === "zh-CN"
+                                    ? "mt-3 mt-md-0 button_address font_normal_size_CN"
+                                    : "mt-3 mt-md-0 button_address font_normal_size"
+                                }
+                                onClick={() => deleteUserDetail(deliveryOption)}
+                              >
+                                {dictionary.delete}
+                              </Button>
+                            )}
+                          </div>
                         </Row>
                       </Form>
                     </Card>

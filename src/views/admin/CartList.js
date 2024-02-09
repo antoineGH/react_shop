@@ -62,9 +62,10 @@ export default function CartList(props) {
             md={8}
             lg={8}
             xl={8}
+            className="order-md-1 order-2"
             style={{ backgroundColor: "#f6f5f3" }}
           >
-            <Container style={{ minHeight: "90vh" }}>
+            <Container>
               <Row>
                 <Col md={12}>
                   <Row className="header_cart ml-md-2">
@@ -76,7 +77,11 @@ export default function CartList(props) {
                             ? "button_cancel_cart_CN"
                             : "button_cancel_cart"
                         }
-                        style={{ borderRadius: ".3rem", background: "white" }}
+                        style={{
+                          borderRadius: ".3rem",
+                          background: "white",
+                          maxWidth: "175px",
+                        }}
                       >
                         <FontAwesomeIcon
                           size="1x"
@@ -111,28 +116,42 @@ export default function CartList(props) {
                         </span>
                       </p>
                     </Col>
+                    <Row
+                      style={{
+                        height: "72vh",
+                        overflowY: "auto",
+                      }}
+                    >
+                      {cart.map((cartdetail) => {
+                        return (
+                          <CartDetail
+                            key={cartdetail.product_name}
+                            cartdetail={cartdetail}
+                            handleDelete={handleDelete}
+                            decrementCount={decrementCount}
+                            incrementCount={incrementCount}
+                          />
+                        );
+                      })}
+                    </Row>
                   </Row>
-                  {cart.map((cartdetail) => {
-                    return (
-                      <CartDetail
-                        key={cartdetail.product_name}
-                        cartdetail={cartdetail}
-                        handleDelete={handleDelete}
-                        decrementCount={decrementCount}
-                        incrementCount={incrementCount}
-                      />
-                    );
-                  })}
                 </Col>
               </Row>
             </Container>
           </Col>
-          <Col xs={12} sm={12} md={4} lg={4} xl={4}>
+          <Col
+            xs={12}
+            sm={12}
+            md={4}
+            lg={4}
+            xl={4}
+            className="order-md-2 order-1"
+          >
             <Container>
               <Row>
                 <Col md={11}>
                   <Row className="header_cart_right ml-md-2 justify-content-center">
-                    <Col md={6} style={{ paddingTop: "2.4rem" }}>
+                    <Col xs={12} lg={6} style={{ paddingTop: "2.4rem" }}>
                       <Button
                         disabled={hasItemCart(cart)}
                         onClick={handleProceed}
@@ -155,7 +174,8 @@ export default function CartList(props) {
                   </Row>
                   <Row className="ml-md-2 justify-content-center">
                     <Col
-                      md={6}
+                      xs={12}
+                      lg={6}
                       className={
                         language === "zh-CN"
                           ? "font_normal_size_CN"
@@ -171,9 +191,10 @@ export default function CartList(props) {
                       {dictionary.secure_payment}
                     </Col>
                   </Row>
-                  <Row className="ml-md-2 justify-content-center">
+                  <Row className="ml-md-2 justify-content-center mb-4 mb-md-1">
                     <Col
-                      md={6}
+                      xs={12}
+                      lg={6}
                       className={
                         language === "zh-CN"
                           ? "font_normal_size_plus_CN"
