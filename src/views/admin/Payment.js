@@ -147,7 +147,11 @@ export default function Payment(props) {
           <Col
             xs={{ span: 12, order: 2 }}
             xl={{ span: 8, order: 1 }}
-            style={{ backgroundColor: "#f6f5f3" }}
+            style={{
+              backgroundColor: "#f6f5f3",
+              height: "calc(100vh - 60px)",
+              overflowY: "auto",
+            }}
           >
             <Container style={{ minHeight: "90vh" }}>
               <Row>
@@ -292,12 +296,7 @@ export default function Payment(props) {
                     </Row>
                   </Card>
 
-                  <Row
-                    style={{
-                      height: "72vh",
-                      overflowY: "auto",
-                    }}
-                  >
+                  <Row>
                     {cart.map((cartdetail) => {
                       return (
                         <div key={cartdetail.cart_id}>

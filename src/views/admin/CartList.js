@@ -63,7 +63,11 @@ export default function CartList(props) {
             lg={8}
             xl={8}
             className="order-md-1 order-2"
-            style={{ backgroundColor: "#f6f5f3" }}
+            style={{
+              backgroundColor: "#f6f5f3",
+              height: "calc(100vh - 60px)",
+              overflowY: "auto",
+            }}
           >
             <Container>
               <Row>
@@ -116,12 +120,7 @@ export default function CartList(props) {
                         </span>
                       </p>
                     </Col>
-                    <Row
-                      style={{
-                        height: "72vh",
-                        overflowY: "auto",
-                      }}
-                    >
+                    <Row>
                       {cart.map((cartdetail) => {
                         return (
                           <CartDetail

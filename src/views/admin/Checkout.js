@@ -271,7 +271,7 @@ export default function Checkout(props) {
                             </Form.Control>
                           </Col>
 
-                          <div
+                          <Row
                             style={{
                               display: "flex",
                               alignContent: "center",
@@ -334,7 +334,7 @@ export default function Checkout(props) {
                                 {dictionary.delete}
                               </Button>
                             )}
-                          </div>
+                          </Row>
                         </Row>
                       </Form>
                     </Card>
