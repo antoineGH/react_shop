@@ -16,7 +16,7 @@ import {
   FormGroup,
   InputGroup,
   NavLink,
-  Alert,
+  // Alert,
 } from "react-bootstrap";
 
 export default function LoginModal(props) {
@@ -124,7 +124,7 @@ export default function LoginModal(props) {
 
         <Container>
           <Row className="justify-content-center mt-3">
-            <Col md={11} className="mb-3 mt-2">
+            {/* <Col md={11} className="mb-3 mt-2">
               <Alert
                 variant="info"
                 style={{
@@ -153,13 +153,13 @@ export default function LoginModal(props) {
                     <p style={{ fontSize: ".9rem", lineHeight: ".9rem" }}>
                       password:{" "}
                       <span style={{ fontWeight: "bold", fontSize: ".9rem" }}>
-                        demo1234
+                        password
                       </span>
                     </p>
                   </Col>
                 </Row>
               </Alert>
-            </Col>
+            </Col> */}
             <Col md={11}>
               <p
                 className={
