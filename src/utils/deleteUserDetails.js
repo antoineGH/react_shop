@@ -2,7 +2,7 @@ import { authFetch } from "./authHooks";
 
 export default async function deleteUserDetails(user_details_id) {
   const response = await authFetch(
-    "https://antoineratat.xyz/api_shop/api/userdetail/" + user_details_id,
+    "https://antoineratat.online/api_shop/api/userdetail/" + user_details_id,
     {
       method: "DELETE",
       headers: {

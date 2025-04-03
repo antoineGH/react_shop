@@ -2,7 +2,7 @@ import { authFetch } from "./../utils/authHooks";
 
 export default async function fetchOrder() {
   const response = await authFetch(
-    "https://antoineratat.xyz/api_shop/api/orders",
+    "https://antoineratat.online/api_shop/api/orders",
     {
       method: "GET",
       headers: {

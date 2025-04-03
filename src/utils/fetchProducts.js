@@ -5,7 +5,7 @@ export default async function fetchProducts(filter = "") {
     filter = "/" + filter;
   }
   const response = await authFetch(
-    "https://antoineratat.xyz/api_shop/api/products" + filter,
+    "https://antoineratat.online/api_shop/api/products" + filter,
     {
       method: "GET",
       headers: {

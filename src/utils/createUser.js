@@ -1,7 +1,7 @@
 export default async function createUser(email, first_name, last_name) {
   const user = { email, first_name, last_name };
   const response = await fetch(
-    "https://antoineratat.xyz/api_shop/api/register",
+    "https://antoineratat.online/api_shop/api/register",
     {
       method: "POST",
       headers: {

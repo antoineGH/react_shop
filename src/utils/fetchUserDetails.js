@@ -2,7 +2,7 @@ import { authFetch } from "./authHooks";
 
 export default async function fetchUserDetails() {
   const response = await authFetch(
-    "https://antoineratat.xyz/api_shop/api/userdetails",
+    "https://antoineratat.online/api_shop/api/userdetails",
     {
       method: "GET",
       headers: {

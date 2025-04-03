@@ -10,7 +10,7 @@ export default async function createUser(
 ) {
   const user = { address, city, state, postcode, country, phone };
   const response = await authFetch(
-    "https://antoineratat.xyz/api_shop/api/userdetails",
+    "https://antoineratat.online/api_shop/api/userdetails",
     {
       method: "POST",
       headers: {

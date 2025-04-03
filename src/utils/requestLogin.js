@@ -1,6 +1,6 @@
 export default async function requestLogin(email, password) {
   const user = { email, password };
-  const response = await fetch("https://antoineratat.xyz/api_shop/api/login", {
+  const response = await fetch("https://antoineratat.online/api_shop/api/login", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",

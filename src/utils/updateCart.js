@@ -5,7 +5,7 @@ export default async function updateCart(cart_id, quantity) {
     quantity,
   };
   const response = await authFetch(
-    "https://antoineratat.xyz/api_shop/api/cart/" + cart_id,
+    "https://antoineratat.online/api_shop/api/cart/" + cart_id,
     {
       method: "PUT",
       headers: {

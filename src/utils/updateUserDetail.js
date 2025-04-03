@@ -11,7 +11,7 @@ export default async function updateUserDetail(
 ) {
   const user = { address, city, state, postcode, country, phone };
   const response = await authFetch(
-    "https://antoineratat.xyz/api_shop/api/userdetail/" + user_details_id,
+    "https://antoineratat.online/api_shop/api/userdetail/" + user_details_id,
     {
       method: "PUT",
       headers: {

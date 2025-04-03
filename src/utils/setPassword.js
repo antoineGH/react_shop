@@ -6,7 +6,7 @@ export default async function updatePassword(password, token) {
     token,
   };
   const response = await authFetch(
-    "https://antoineratat.xyz/api_shop/api/set_password",
+    "https://antoineratat.online/api_shop/api/set_password",
     {
       method: "POST",
       headers: {

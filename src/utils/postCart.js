@@ -3,7 +3,7 @@ import { authFetch } from "./authHooks";
 export default async function postCart(quantity, product_id) {
   const cartdetail = { quantity, product_id };
   const response = await authFetch(
-    "https://antoineratat.xyz/api_shop/api/cart",
+    "https://antoineratat.online/api_shop/api/cart",
     {
       method: "POST",
       headers: {

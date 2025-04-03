@@ -2,7 +2,7 @@ import { authFetch } from "./../utils/authHooks";
 
 export default async function deleteCart(cart_id) {
   const response = await authFetch(
-    "https://antoineratat.xyz/api_shop/api/cart/" + cart_id,
+    "https://antoineratat.online/api_shop/api/cart/" + cart_id,
     {
       method: "DELETE",
       headers: {

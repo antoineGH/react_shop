@@ -2,7 +2,7 @@ import { authFetch } from "./../utils/authHooks";
 
 export default async function fetchCart() {
   const response = await authFetch(
-    "https://antoineratat.xyz/api_shop/api/cart",
+    "https://antoineratat.online/api_shop/api/cart",
     {
       method: "GET",
       headers: {

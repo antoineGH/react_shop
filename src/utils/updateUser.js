@@ -8,7 +8,7 @@ export default async function updateUser(
 ) {
   const user = { first_name, last_name, password, profile_picture };
   const response = await authFetch(
-    "https://antoineratat.xyz/api_shop/api/user",
+    "https://antoineratat.online/api_shop/api/user",
     {
       method: "PUT",
       headers: {
